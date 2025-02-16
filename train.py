@@ -23,23 +23,22 @@ import torchvision.datasets as datasets
 import timm.optim.optim_factory as optim_factory
 
 import utils.datasets
-import utils.iml_transforms
+import utils.transforms
 import utils.misc as misc
 from utils.misc import NativeScalerWithGradNormCount as NativeScaler
 
 
-import iml_vit_model
+import model
 
 from engine_train import train_one_epoch, test_one_epoch
 
 def get_args_parser():
-    parser = argparse.ArgumentParser('IML-ViT training', add_help=True)
+    parser = argparse.ArgumentParser('MPG-ViT training', add_help=True)
     parser.add_argument('--batch_size', default=1, type=int,
                         help='Batch size per GPU (effective batch size is batch_size * accum_iter * # gpus')
     parser.add_argument('--test_batch_size', default=1, type=int,
                         help="batch size for testing")
     #
-    parser.add_argument('--vit_pretrain_path', default = '/root/workspace/IML-ViT/pretrained-weights/mae_pretrain_vit_base.pth', type=str, help='path to vit pretrain model by MAE')
     
     parser.add_argument('--epochs', default=200, type=int)
     parser.add_argument('--test_period', default=4, type=int,
@@ -117,8 +116,8 @@ def main(args):
     torch.manual_seed(seed)
     np.random.seed(seed)
 
-    train_transform = utils.iml_transforms.get_albu_transforms('train')
-    test_transform = utils.iml_transforms.get_albu_transforms('test')
+    train_transform = utils.transforms.get_albu_transforms('train')
+    test_transform = utils.transforms.get_albu_transforms('test')
 
     # ---- dataset with crop augmentation ----
     if os.path.isdir(args.data_path):
@@ -172,7 +171,7 @@ def main(args):
     )
 
     # define the model
-    model = iml_vit_model.iml_vit_model(
+    model = model.model(
         vit_pretrain_path = args.vit_pretrain_path,
         predict_head_norm= args.predict_head_norm,
         edge_lambda = args.edge_lambda
