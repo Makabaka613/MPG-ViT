@@ -11,6 +11,7 @@ To run this project, you'll need to have the following libraries installed:
 - timm
 - fvcore
 - tensorboard
+
 You can install the required libraries using pip:
 ```bash
 pip install torch, albumentations, matplotlib, numpy, scikit-learn, timm, fvcore, tensorboard
