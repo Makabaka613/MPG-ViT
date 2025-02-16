@@ -21,3 +21,15 @@ pip install torch, albumentations, matplotlib, numpy, scikit-learn, timm, fvcore
 This project uses a pre-trained large-scale model to convert images into semantic text and locate image tampering. The model we use is the **LLaMA 3.1 8B Vision model**, which is available on Hugging Face and can effectively convert image content into meaningful text descriptions.
 
 You can access and use the model at this link: [LLaMA 3.1 8B Vision](https://huggingface.co/qresearch/llama-3.1-8B-vision-378).
+
+## Datasets
+
+Here are several datasets used in this project, which you can access and download via the links provided:
+
+- **NIST16**: [NIST16 Dataset](https://mig.nist.gov/MFC/PubData/Resources.html)
+- **Defacto**: [Defacto Dataset](https://defactodataset.github.io/)
+- **CASIAv1**: [CASIAv1 Dataset](https://www.kaggle.com/datasets/sophatvathana/casia-dataset?select=CASIA1)
+- **CASIAv2**: [CASIAv2 Dataset](https://www.kaggle.com/datasets/sophatvathana/casia-dataset?select=CASIA2)
+- **Columbia**: [Columbia Dataset](https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/)
+- **Coverage**: [Coverage Dataset](https://stefan.winklerbros.net/Publications/icip2016b.pdf)
+
