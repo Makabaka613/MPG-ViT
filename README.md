@@ -15,6 +15,7 @@ To run this project, you'll need to have the following libraries installed:
 You can install the required libraries using pip:
 ```bash
 pip install torch, albumentations, matplotlib, numpy, scikit-learn, timm, fvcore, tensorboard
+```
 ## Code
 
 This project uses a pre-trained large-scale model to convert images into semantic text and locate image tampering. The model we use is the **LLaMA 3.1 8B Vision model**, which is available on Hugging Face and can effectively convert image content into meaningful text descriptions.
