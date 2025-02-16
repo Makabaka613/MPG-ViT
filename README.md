@@ -33,3 +33,13 @@ Here are several datasets used in this project, which you can access and downloa
 - **Columbia**: [Columbia Dataset](https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/)
 - **Coverage**: [Coverage Dataset](https://stefan.winklerbros.net/Publications/icip2016b.pdf)
 
+## Citation
+
+If you use this code or data in your research, please cite our paper:
+
+```bibtex
+@article{YourPaperTitle,
+  title={Multimodal Prompt-Guided Vision Transformer For Precise Image Manipulation Localization},
+  journal={The Visual Computer},
+}
+
