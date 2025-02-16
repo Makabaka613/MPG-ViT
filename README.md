@@ -38,7 +38,7 @@ Here are several datasets used in this project, which you can access and downloa
 If you use this code or data in your research, please cite our paper:
 
 ```bibtex
-@article{YourPaperTitle,
+@article{Xiao2025,
   title={Multimodal Prompt-Guided Vision Transformer For Precise Image Manipulation Localization},
   journal={The Visual Computer},
 }
